@@ -11,13 +11,13 @@ public class Main {
         System.out.println("   TECNOMÓVIL DATA - MÓDULO ANALÍTICO DE TRANSPORTE     ");
 
 
-        // 1. Generar dataset de prueba (100 registros simulación)
+        // Generar dataset de prueba (100 registros simulación)
         int cantidadRegistros = 100;
         List<RegistroTransporte> registros = GeneradorDatos.generar(cantidadRegistros);
         System.out.println(">>> Se han generado " + registros.size() + " registros sintéticos para el análisis.\n");
 
 
-        // a) Cálculo de afluencia por estación (solo entradas)
+        // Cálculo de afluencia por estación (solo entradas)
         System.out.println("--- a) AFLUENCIA POR ESTACIÓN (Ingresos) ---");
         Map<String, Long> afluencia = ProcesadorTransporte.afluenciaPorEstacion(registros);
         afluencia.forEach((estacion, total) -> 
@@ -26,7 +26,7 @@ public class Main {
         System.out.println();
 
 
-        // b) Hora de mayor afluencia (Hora Pico)
+        // Hora de mayor afluencia (Hora Pico)
         System.out.println("--- b) HORA PICO / MAYOR AFLUENCIA ---");
         int horaPico = ProcesadorTransporte.horaDeMayorAfluencia(registros);
         if (horaPico != -1) {
@@ -37,7 +37,7 @@ public class Main {
         System.out.println();
 
 
-        // c) Rutas más utilizadas
+        // Rutas más utilizadas
         System.out.println("--- c) RUTAS MÁS UTILIZADAS (Orden Descendente) ---");
         List<Map.Entry<String, Long>> rutasOrdenadas = ProcesadorTransporte.rutasMasUtilizadas(registros);
         rutasOrdenadas.forEach(entrada -> 
@@ -46,7 +46,7 @@ public class Main {
         System.out.println();
 
 
-        // d) Patrones de viaje por usuario
+        // patrones de viaje por usuario
         System.out.println("--- d) PATRONES DE VIAJE POR USUARIO (Muestra de usuarios) ---");
         Map<String, List<String>> patrones = ProcesadorTransporte.patronesPorUsuario(registros);
         patrones.entrySet().stream().limit(5).forEach(entrada -> 
@@ -55,7 +55,7 @@ public class Main {
         System.out.println();
 
 
-        // e) Tiempo promedio entre estaciones (en minutos)
+        //Tiempo promedio entre estaciones (en minutos)
         System.out.println("--- e) TIEMPO PROMEDIO ENTRE ESTACIONES (Por usuario) ---");
         Map<String, Double> tiemposPromedio = ProcesadorTransporte.tiempoPromedioEntreEstaciones(registros);
         tiemposPromedio.entrySet().stream().limit(5).forEach(entrada -> 
@@ -64,7 +64,7 @@ public class Main {
         System.out.println();
 
 
-        // f) Detección de sobrecarga en rutas (con umbral simulado de 18 eventos)
+        //Detección de sobrecarga en rutas (con umbral simulado de 18 eventos)
         long umbralSobreocupacion = 18;
         System.out.println("--- f) DETECCIÓN DE SOBRECARGA EN RUTAS (Umbral: " + umbralSobreocupacion + " eventos) ---");
         List<String> reporteSobrecarga = ProcesadorTransporte.deteccionSobrecarga(registros, umbralSobreocupacion);
