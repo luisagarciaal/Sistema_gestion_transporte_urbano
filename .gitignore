@@ -1,16 +1,3 @@
-# Archivos compilados de Java
+
 *.class
 out/
-bin/
-
-# Carpetas de IDE
-.vscode/
-.idea/
-*.iml
-
-# Archivos del sistema operativo
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
