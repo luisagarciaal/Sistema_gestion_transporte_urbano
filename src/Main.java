@@ -2,16 +2,14 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Clase principal de ejecución para la plataforma TecnoMóvil Data.
- * Nivel: 4to Semestre - Tecnología en Desarrollo de Software.
- */
+ * Clase principal de ejecución para la plataforma TecnoMóvil Data.*/
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("========================================================");
+
         System.out.println("   TECNOMÓVIL DATA - MÓDULO ANALÍTICO DE TRANSPORTE     ");
-        System.out.println("========================================================\n");
+
 
         // 1. Generar dataset de prueba (100 registros simulación)
         int cantidadRegistros = 100;
@@ -72,8 +70,7 @@ public class Main {
         List<String> reporteSobrecarga = ProcesadorTransporte.deteccionSobrecarga(registros, umbralSobreocupacion);
         reporteSobrecarga.forEach(linea -> System.out.println("  " + linea));
 
-        System.out.println("\n========================================================");
         System.out.println("   PROCESAMIENTO FUNCIONAL FINALIZADO CON ÉXITO        ");
-        System.out.println("========================================================");
+
     }
 }
