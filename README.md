@@ -47,21 +47,23 @@ src/
 ├── GeneradorDatos.java       # Generación sintética determinista (Random Seed 42)
 ├── ProcesadorTransporte.java # Capa analítica funcional (Streams & Lambdas)
 └── Main.java                 # Clase principal de ejecución y renderizado
+```
+
+---
 
 ## Compilación y Ejecución
 
 ### Requisitos previos
 * JDK 8 o superior instalado.
-* Consola de comandos.
+* Consola de comandos / Terminal.
 
-### Ejecución desde consola con Bash 
+### Ejecución desde consola con Bash
 
 ```bash
 # 1. Clonar el repositorio
 git clone https://github.com/luisagarciaal/Sistema_gestion_transporte_urbano
-
 # 2. Entrar al directorio del proyecto
-cd SISTEMA_GESTION_TRANSPORTE_URBANO
+cd Sistema_gestion_transporte_urbano
 
 # 3. Compilar todos los archivos Java hacia la carpeta de salida 'out'
 javac *.java -d out
@@ -69,3 +71,17 @@ javac *.java -d out
 # 4. Ejecutar la clase principal Main
 java -cp out Main
 ```
+
+### Ejecución desde consola con PowerShell / Command Prompt
+
+```powershell
+# 1. Compilar los archivos Java en el directorio 'bin'
+javac -d bin *.java
+
+# 2. Ejecutar la clase Main desde 'bin'
+java -cp bin Main
+```
+
+---
+Institución Universitaria Digital de Antioquia  
+Tecnología en Desarrollo de Software - 2026
