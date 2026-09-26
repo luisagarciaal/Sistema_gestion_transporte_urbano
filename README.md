@@ -43,9 +43,9 @@ El sistema resuelve 6 métricas analíticas de negocio mediante pipelines de Str
 
 ```text
 src/
-├── RegistroTransporte.java   # Modelo de datos inmutable (DTO)
-├── GeneradorDatos.java       # Generación sintética determinista (Random Seed 42)
-├── ProcesadorTransporte.java # Capa analítica funcional (Streams & Lambdas)
+├── RegistroTransporte.java   # Modelo de datos inmutable 
+├── GeneradorDatos.java       # Generación sintética determinista
+├── ProcesadorTransporte.java # Capa analítica funcional
 └── Main.java                 # Clase principal de ejecución y renderizado
 ```
 
@@ -71,17 +71,5 @@ javac *.java -d out
 # 4. Ejecutar la clase principal Main
 java -cp out Main
 ```
-
-### Ejecución desde consola con PowerShell / Command Prompt
-
-```powershell
-# 1. Compilar los archivos Java en el directorio 'bin'
-javac -d bin *.java
-
-# 2. Ejecutar la clase Main desde 'bin'
-java -cp bin Main
-```
-
 ---
-Institución Universitaria Digital de Antioquia  
-Tecnología en Desarrollo de Software - 2026
+Institución Universitaria Digital de Antioquia.
